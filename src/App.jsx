@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { IntlProvider } from "react-intl";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import fr from "assets/translation/fr";
 import en from "assets/translation/en";
 import LanguagesContext from "context/LanguagesContext";
 
+import Navbar from "components/Navbar";
 import Home from "components/Home";
+import Projects from "components/Projects";
+import About from "components/About";
 
 const messages = {
 	fr,
@@ -18,9 +22,19 @@ const App = () => {
 	return (
 		<>
 			<IntlProvider locale={language} messages={messages[language]}>
-				<LanguagesContext.Provider value={{ setLanguage }}>
-					<Home />
-				</LanguagesContext.Provider>
+				<Router>
+					<div>
+						<Navbar />
+
+						<Switch>
+							<Route path={`/works/:id`} component={Projects} />
+							<Route path="/about" component={About} />
+							<LanguagesContext.Provider value={{ setLanguage }}>
+								<Route exact path="/" component={Home} />
+							</LanguagesContext.Provider>
+						</Switch>
+					</div>
+				</Router>
 			</IntlProvider>
 		</>
 	);
