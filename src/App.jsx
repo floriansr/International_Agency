@@ -9,6 +9,7 @@ import LanguagesContext from "context/LanguagesContext";
 import Navbar from "components/Navbar";
 import Home from "components/Home";
 import Projects from "components/Projects";
+import Project from "components/Project";
 import About from "components/About";
 
 const messages = {
@@ -27,7 +28,11 @@ const App = () => {
 						<Navbar />
 
 						<Switch>
-							<Route path={`/works/:id`} component={Projects} />
+							<Route exact path="/works" component={Projects} />
+							<Route
+								path={`/works/:projectSlug`}
+								component={Project}
+							/>
 							<Route path="/about" component={About} />
 							<LanguagesContext.Provider value={{ setLanguage }}>
 								<Route exact path="/" component={Home} />
