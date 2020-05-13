@@ -1,13 +1,35 @@
-import React from "react";
+import React, { useContext } from "react";
+import LanguagesContext from "context/LanguagesContext";
+
 import { Link } from "react-router-dom";
+import fr from "assets/img/fr.png";
+import uk from "assets/img/uk.png";
 
 const Navbar = () => {
+	const { setLanguage } = useContext(LanguagesContext);
+
 	return (
 		<>
-			<div className="container">
+			<div>
 				<Link to="/">Home</Link>
 				<Link to="/about">About</Link>
 				<Link to="/works">Projects</Link>
+				<div>
+					<img
+						src={fr}
+						width="50px"
+						height="50px"
+						alt=""
+						onClick={() => setLanguage("fr")}
+					/>
+					<img
+						src={uk}
+						width="50px"
+						height="50px"
+						alt=""
+						onClick={() => setLanguage("en")}
+					/>
+				</div>
 			</div>
 		</>
 	);

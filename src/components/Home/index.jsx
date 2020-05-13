@@ -1,23 +1,15 @@
-import React, { useContext } from "react";
-import LanguagesContext from "context/LanguagesContext";
+import React from "react";
 import { FormattedMessage } from "react-intl";
 
 const Home = () => {
-	const { setLanguage } = useContext(LanguagesContext);
-
 	return (
 		<>
+			<h3>
+				<FormattedMessage id="HomeTitle" />
+			</h3>
 			<p>
-				<FormattedMessage id="Titre" />
+				<FormattedMessage id="HomePresentation" />
 			</p>
-
-			<button type="button" onClick={() => setLanguage("en")}>
-				English
-			</button>
-
-			<button type="button" onClick={() => setLanguage("fr")}>
-				Français
-			</button>
 		</>
 	);
 };

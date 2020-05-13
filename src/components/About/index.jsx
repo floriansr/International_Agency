@@ -1,9 +1,15 @@
 import React from "react";
+import { FormattedMessage } from "react-intl";
 
 const About = () => {
 	return (
 		<>
-			<p>je suis le about</p>
+			<h3>
+				<FormattedMessage id="AboutTitle" />
+			</h3>
+			<p>
+				<FormattedMessage id="AboutPresentation" />
+			</p>
 		</>
 	);
 };

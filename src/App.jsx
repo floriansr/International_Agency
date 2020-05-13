@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { IntlProvider } from "react-intl";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import { flattenMessages } from "tools/FlattenMessages";
 import fr from "assets/translation/fr";
 import en from "assets/translation/en";
+
 import LanguagesContext from "context/LanguagesContext";
 
 import Navbar from "components/Navbar";
@@ -22,21 +24,24 @@ const App = () => {
 
 	return (
 		<>
-			<IntlProvider locale={language} messages={messages[language]}>
+			<IntlProvider
+				locale={language}
+				messages={flattenMessages(messages[language])}
+			>
 				<Router>
 					<div>
-						<Navbar />
+						<LanguagesContext.Provider value={{ setLanguage }}>
+							<Navbar />
+						</LanguagesContext.Provider>
 
 						<Switch>
 							<Route exact path="/works" component={Projects} />
 							<Route
-								path={`/works/:projectSlug`}
+								path="/works/:projectSlug"
 								component={Project}
 							/>
 							<Route path="/about" component={About} />
-							<LanguagesContext.Provider value={{ setLanguage }}>
-								<Route exact path="/" component={Home} />
-							</LanguagesContext.Provider>
+							<Route exact path="/" component={Home} />
 						</Switch>
 					</div>
 				</Router>

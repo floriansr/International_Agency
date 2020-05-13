@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from "react";
+
 import { useParams } from "react-router-dom";
+
+import { FormattedMessage } from "react-intl";
 import dataProjects from "data/dataProjects";
+
+// import aazz from "assets/translation/fr/project.json";
 
 const Project = () => {
 	const { projectSlug } = useParams();
@@ -20,9 +25,23 @@ const Project = () => {
 	const renderedItem = () => {
 		return (
 			<div>
-				<h1>{currentProject.title}</h1>
-				<p>{currentProject.author}</p>
-				<p>{currentProject.description}</p>
+				<p>
+					<FormattedMessage
+						id={`${Object.values(currentProject)[0]}.project_name`}
+					/>
+				</p>
+
+				<p>
+					<FormattedMessage
+						id={`${Object.values(currentProject)[0]}.title`}
+					/>
+				</p>
+
+				<p>
+					<FormattedMessage
+						id={`${Object.values(currentProject)[0]}.description`}
+					/>
+				</p>
 			</div>
 		);
 	};

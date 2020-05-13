@@ -1,6 +1,4 @@
 {
-	"Titre": "Bonjour, je m'appelle X Y. Bienvenue sur mon portfolio",
-	"Présentation": "Depuis le début de l'année 2019, j'apprends le développement web grâce à The Hacking Projet. J'ai ainsi pu apprendre à utiliser Ruby, Rails, Javascript et React.",
-	"Travaux": "Vous pourrez trouver ci-dessous la liste de mes projets. J'en ai réalisé certains lors de ma formation chez The Hacking Project, et d'autres sont des projets personnels.",
-	"Contact": "Vous souhaitez discutter avec moi, que ce soit pour me proposer un poste ou pour passer le temps pendant ce confinement ? Remplissez le formulaire ci-dessous, je vous contacterai dès que je le peux."
+	"HomeTitle": "Confiez vos rêves à des experts du Web",
+	"HomePresentation": "Grâce à notre savoir-faire, notre expérience et notre écoute, nous accompagnons nos clients dans la création de site internet: étude, UX, conception, design, développement, SEO. Notre agence web est capable de répondre à tous vos besoins et d'élaborer une véritable stratégie digitale."
 }
