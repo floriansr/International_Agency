@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/International_Agency/static/css/main.13a5c3c9.chunk.css",
+    "main.js": "/International_Agency/static/js/main.20c31962.chunk.js",
+    "main.js.map": "/International_Agency/static/js/main.20c31962.chunk.js.map",
+    "runtime-main.js": "/International_Agency/static/js/runtime-main.d59500aa.js",
+    "runtime-main.js.map": "/International_Agency/static/js/runtime-main.d59500aa.js.map",
+    "static/css/2.35fcc229.chunk.css": "/International_Agency/static/css/2.35fcc229.chunk.css",
+    "static/js/2.2cec0fd4.chunk.js": "/International_Agency/static/js/2.2cec0fd4.chunk.js",
+    "static/js/2.2cec0fd4.chunk.js.map": "/International_Agency/static/js/2.2cec0fd4.chunk.js.map",
+    "index.html": "/International_Agency/index.html",
+    "precache-manifest.73697f7e84253f8e6ac40c7a6a26631e.js": "/International_Agency/precache-manifest.73697f7e84253f8e6ac40c7a6a26631e.js",
+    "service-worker.js": "/International_Agency/service-worker.js",
+    "static/css/2.35fcc229.chunk.css.map": "/International_Agency/static/css/2.35fcc229.chunk.css.map",
+    "static/css/main.13a5c3c9.chunk.css.map": "/International_Agency/static/css/main.13a5c3c9.chunk.css.map",
+    "static/js/2.2cec0fd4.chunk.js.LICENSE.txt": "/International_Agency/static/js/2.2cec0fd4.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d59500aa.js",
+    "static/css/2.35fcc229.chunk.css",
+    "static/js/2.2cec0fd4.chunk.js",
+    "static/css/main.13a5c3c9.chunk.css",
+    "static/js/main.20c31962.chunk.js"
+  ]
+}
