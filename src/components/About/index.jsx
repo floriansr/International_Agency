@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useEffect, useContext } from "react";
+import { useHistory } from "react-router-dom";
+
 import { FormattedMessage } from "react-intl";
+import LanguagesContext from "context/LanguagesContext";
 
 const About = () => {
+	const history = useHistory();
+	const { language } = useContext(LanguagesContext);
+
+	useEffect(() => {
+		history.push(`/about/${language}`);
+	}, [language]);
+
 	return (
 		<>
 			<h3>

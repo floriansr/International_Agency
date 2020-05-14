@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { IntlProvider } from "react-intl";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -22,6 +22,14 @@ const messages = {
 const App = () => {
 	const [language, setLanguage] = useState("fr");
 
+	useEffect(() => {
+		setLanguage(localStorage.getItem("Language fav"));
+	}, []);
+
+	useEffect(() => {
+		localStorage.setItem("Language fav", language);
+	}, [language]);
+
 	return (
 		<>
 			<IntlProvider
@@ -30,19 +38,27 @@ const App = () => {
 			>
 				<Router>
 					<div>
-						<LanguagesContext.Provider value={{ setLanguage }}>
+						<LanguagesContext.Provider
+							value={{ language, setLanguage }}
+						>
 							<Navbar />
 						</LanguagesContext.Provider>
 
-						<Switch>
-							<Route exact path="/works" component={Projects} />
-							<Route
-								path="/works/:projectSlug"
-								component={Project}
-							/>
-							<Route path="/about" component={About} />
-							<Route exact path="/" component={Home} />
-						</Switch>
+						<LanguagesContext.Provider value={{ language }}>
+							<Switch>
+								<Route
+									exact
+									path={`/works`}
+									component={Projects}
+								/>
+								<Route
+									path="/works/:projectSlug"
+									component={Project}
+								/>
+								<Route path="/about" component={About} />
+								<Route path="/" component={Home} />
+							</Switch>
+						</LanguagesContext.Provider>
 					</div>
 				</Router>
 			</IntlProvider>

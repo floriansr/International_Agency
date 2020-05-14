@@ -1,15 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 
-import { useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
+import LanguagesContext from "context/LanguagesContext";
 
 import { FormattedMessage } from "react-intl";
 import dataProjects from "data/dataProjects";
 
-// import aazz from "assets/translation/fr/project.json";
-
 const Project = () => {
+	const history = useHistory();
+	const { language } = useContext(LanguagesContext);
 	const { projectSlug } = useParams();
 	const [currentProject, setCurrentProject] = useState(null);
+
+	console.log(projectSlug);
+
+	useEffect(() => {
+		history.push(`/works/${projectSlug}/${language}`);
+	}, [language]);
 
 	useEffect(() => {
 		const projectId = projectSlug.slice(
