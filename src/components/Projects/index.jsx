@@ -1,9 +1,5 @@
 import React from "react";
 
-// { useEffect, useContext }
-// import LanguagesContext from "context/LanguagesContext";
-// , useHistory
-
 import { Link } from "react-router-dom";
 import { FormattedMessage } from "react-intl";
 import data from "assets/translation/fr/project.json";
@@ -12,13 +8,6 @@ import shortid from "shortid";
 import { Card } from "antd";
 
 const Projects = () => {
-	// const history = useHistory();
-	// const { language } = useContext(LanguagesContext);
-
-	// useEffect(() => {
-	// 	history.push(`/works/${language}`);
-	// }, [language]);
-
 	return (
 		<>
 			<h3>

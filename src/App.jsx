@@ -48,13 +48,14 @@ const App = () => {
 							<Switch>
 								<Route
 									exact
-									path={`/works`}
+									path="/works"
 									component={Projects}
 								/>
 								<Route
 									path="/works/:projectSlug"
 									component={Project}
 								/>
+
 								<Route path="/about" component={About} />
 								<Route path="/" component={Home} />
 							</Switch>
