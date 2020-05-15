@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 
 import { useParams, useHistory } from "react-router-dom";
-import LanguagesContext from "context/LanguagesContext";
 
+import LanguagesContext from "context/LanguagesContext";
 import { FormattedMessage } from "react-intl";
+
 import dataProjects from "data/dataProjects";
 
 const Project = () => {

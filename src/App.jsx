@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { IntlProvider } from "react-intl";
+
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import { IntlProvider } from "react-intl";
+import LanguagesContext from "context/LanguagesContext";
 import { flattenMessages } from "tools/FlattenMessages";
 import fr from "assets/translation/fr";
 import en from "assets/translation/en";
-
-import LanguagesContext from "context/LanguagesContext";
 
 import Navbar from "components/Navbar";
 import Home from "components/Home";
@@ -23,12 +23,12 @@ const App = () => {
 	const [language, setLanguage] = useState("fr");
 
 	useEffect(() => {
-		setLanguage(localStorage.getItem("Language fav"));
-	}, []);
-
-	useEffect(() => {
 		localStorage.setItem("Language fav", language);
 	}, [language]);
+
+	useEffect(() => {
+		setLanguage(localStorage.getItem("Language fav"));
+	}, []);
 
 	return (
 		<>
@@ -42,9 +42,7 @@ const App = () => {
 							value={{ language, setLanguage }}
 						>
 							<Navbar />
-						</LanguagesContext.Provider>
 
-						<LanguagesContext.Provider value={{ language }}>
 							<Switch>
 								<Route
 									exact

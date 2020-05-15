@@ -1,7 +1,8 @@
 import React, { useContext } from "react";
-import LanguagesContext from "context/LanguagesContext";
 
 import { Link } from "react-router-dom";
+
+import LanguagesContext from "context/LanguagesContext";
 import fr from "assets/img/fr.png";
 import uk from "assets/img/uk.png";
 

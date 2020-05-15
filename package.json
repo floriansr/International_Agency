@@ -2,12 +2,14 @@
   "name": "AntDesign",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://floriansr.github.io/International_Agency",
   "dependencies": {
     "@ant-design/icons": "^4.1.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "antd": "^4.2.0",
+    "gh-pages": "^2.2.0",
     "moment": "^2.25.3",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
@@ -19,6 +21,7 @@
     "shortid": "^2.2.15"
   },
   "scripts": {
+    "deploy": "npm run build&&gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

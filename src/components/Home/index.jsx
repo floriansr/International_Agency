@@ -1,7 +1,7 @@
 import React, { useEffect, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import LanguagesContext from "context/LanguagesContext";
 
+import LanguagesContext from "context/LanguagesContext";
 import { FormattedMessage } from "react-intl";
 
 const Home = () => {
